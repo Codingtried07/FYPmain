@@ -1,0 +1,41 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# C/C++ builds (PyTorch extensions)
+build/
+*.obj
+*.o
+*.lib
+*.dll
+
+# PyTorch
+*.pth
+*.pt
+*.cpkl
+*.ckpt
+
+# Temporary/Cache files
+.cache/
+.pytest_cache/
+
+# Data and outputs
+mmPoint/data/
+mmPoint/S-PMP-output/
+mmPoint/results/
+
+# Editor/IDE
+.vscode/
+.idea/
+.claude/
