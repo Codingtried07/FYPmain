@@ -14,8 +14,8 @@ def bin2npy(bin_file, single_radarimg_dir):
 if __name__ == "__main__":
 
     # need to be set manually
-    radar_dir = 'C:/Users/renes/OneDrive/Desktop/FYPmain/mmPoint/data/radar'
-    radar_img_dir = 'C:/Users/renes/OneDrive/Desktop/FYPmain/mmPoint/data/npy' # your path to save the npy radar signal files
+    radar_dir = 'data/radar'
+    radar_img_dir = 'data/npy'
 
     # Create the folder if it doesn't exist
     if not os.path.exists(radar_img_dir):

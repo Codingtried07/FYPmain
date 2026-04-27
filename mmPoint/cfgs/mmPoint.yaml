@@ -35,6 +35,6 @@ pk: 10
 
 radius: 0.5
 normalization: UnitBall
-pointcloud_path: 'C:/Users/renes/OneDrive/Desktop/FYPmain/mmPoint/data/58scenes'
-radar_path: 'C:/Users/renes/OneDrive/Desktop/FYPmain/mmPoint/data/hdf5'
-cache_path: 'C:/Users/renes/OneDrive/Desktop/FYPmain/mmPoint/data/cache'
+pointcloud_path: 'data/58scenes'
+radar_path: 'data/hdf5'
+cache_path: 'data/cache'

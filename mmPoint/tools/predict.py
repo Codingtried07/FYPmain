@@ -1,6 +1,6 @@
 import warnings
 import sys
-sys.path.append('C:/Users/renes/OneDrive/Desktop/FYPmain/mmPoint')
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 import numpy as np
 import torch
 import random
@@ -31,7 +31,7 @@ def predict_one_pc(input_radar_path, load_model):
     radar = torch.Tensor(np.load(input_radar_path, allow_pickle=True))
     radar = radar.unsqueeze(0).cuda()
 
-    template_name = 'C:/Users/renes/OneDrive/Desktop/FYPmain/mmPoint/human_template/human_template_256.xyz'
+    template_name = os.path.join(os.path.dirname(__file__), '..', 'human_template', 'human_template_256.xyz')
     template_points = np.loadtxt(template_name)
     template_points = pc_normalize(template_points, 0.5)
 
@@ -50,12 +50,12 @@ if __name__ == "__main__":
     args = munch.munchify(yaml.safe_load(open(config_path)))
 
     # need to be set manually
-    input_npy_path = 'C:/Users/renes/OneDrive/Desktop/FYPmain/mmPoint/data/hdf5/single_100_000000.npy'
+    input_npy_path = 'data/hdf5/single_100_000000.npy'
     save_dir = './results'
     os.makedirs(save_dir, exist_ok=True)
 
     # need to be set manually
-    model_name = 'C:/Users/renes/OneDrive/Desktop/FYPmain/mmPoint/S-PMP-output/mmPoint-0315_1102/checkpoints/50network.pth'
+    model_name = 'S-PMP-output/mmPoint-0315_1102/checkpoints/50network.pth'
 
     predict_pc = predict_one_pc(input_npy_path, model_name)
     savetxt = save_dir + '/test.txt'

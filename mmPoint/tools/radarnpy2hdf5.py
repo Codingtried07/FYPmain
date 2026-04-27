@@ -17,8 +17,8 @@ class Normalize(object):
         return (radarDataNorm - mean.view(c, 1, 1)) / std.view(c, 1, 1)
 
 # need to be set manually
-source_dir = 'C:/Users/renes/OneDrive/Desktop/FYPmain/mmPoint/data/npy/radar'
-target_dir = 'C:/Users/renes/OneDrive/Desktop/FYPmain/mmPoint/data/hdf5'
+source_dir = 'data/npy/radar'
+target_dir = 'data/hdf5'
 
 
 if not os.path.exists(target_dir):
