@@ -8,7 +8,7 @@ from densify import simulate_densification
 GESTURE_CLASSES = ['knock', 'lswipe', 'rswipe', 'rotate']
 GESTURE_TO_IDX = {g: i for i, g in enumerate(GESTURE_CLASSES)}
 
-DATA_ROOT = 'C:/Users/renes/Downloads/mmWave-gesture-dataset-master/gesture_dataset/long_range_gesture/long_SEP'
+DATA_ROOT = 'PATH/TO/YOUR/DATASET'  # TODO: Replace with your actual dataset path
 
 
 def load_csv_gestures(csv_path):
